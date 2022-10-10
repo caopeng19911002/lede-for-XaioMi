@@ -40,6 +40,19 @@
    make V=s -j1
    ```
 
+5.更改Argon主题
+   ```bash
+   cd openwrt
+   rm -rf feeds/luci/themes/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
+   ```
+   
+6.编译旧版openclash 0.44.29
+   ```bash
+   cd openwrt
+   rm -rf feeds/kenzo/luci-app-openclash && git clone https://github.com/caopeng19911002/openclash-0.44.29.git feeds/kenzo/luci-app-openclash && ./scripts/feeds install -a
+   ```
+   
+   
 本套代码保证肯定可以编译成功。里面包括了 R22 所有源代码，包括 IPK 的。
 
 你可以自由使用，但源码编译二次发布请注明我的 GitHub 仓库链接。谢谢合作！
