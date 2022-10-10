@@ -56,7 +56,7 @@
   二次编译：
 
   ```bash
-  cd lede
+  cd openwrt
   make clean
   git pull
   ./scripts/feeds update -a
