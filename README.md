@@ -40,6 +40,23 @@
    make menuconfig
    ```
 
+4.添加第三方源
+   ```bash
+   cd openwrt
+   sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+   sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+   ```
+5.更改Argon主题
+   ```bash
+   cd openwrt
+   rm -rf feeds/luci/themes/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
+   ```
+6.安装旧版openclash 0.44.29
+   ```bash
+   cd openwrt
+   rm -rf feeds/kenzo/luci-app-openclash && git clone https://github.com/caopeng19911002/openclash-0.44.29.git feeds/kenzo/luci-app-openclash && ./scripts/feeds install -a
+
+
 4. 下载 dl 库，编译固件
 （-j 后面是线程数，第一次编译推荐用单线程）
 
@@ -61,7 +78,7 @@ git pull
 ./scripts/feeds install -a
 make defconfig
 make download -j8
-make V=s -j$(nproc)
+make V=s -j12
 ```
 
 如果需要重新配置：
