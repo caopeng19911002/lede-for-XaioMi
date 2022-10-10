@@ -65,7 +65,21 @@
   make -j8 download V=s
   make -j12 V=s
   ```
+  
+  二次编译旧版openclash0.44.29：
 
+  ```bash
+  cd openwrt
+  make clean
+  git pull
+  ./scripts/feeds update -a
+  rm -rf feeds/kenzo/luci-app-openclash && git clone https://github.com/caopeng19911002/openclash-0.44.29.git feeds/kenzo/luci-app-openclash && ./scripts/feeds install -a
+  make defconfig
+  make -j8 download V=s
+  make -j12 V=s
+  ```
+   
+   
   如果需要重新配置：
 
   ```bash
