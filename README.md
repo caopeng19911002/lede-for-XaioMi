@@ -74,4 +74,4 @@
   make -j12 V=s
   ```
 
-  编译完成后输出路径：bin/targets/       [English](./README_EN.md)
+  编译完成后输出路径：bin/targets/       [config配置文件](./config配置文件.md)
