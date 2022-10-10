@@ -1,7 +1,6 @@
 欢迎来到Lean的Openwrt源码仓库！
 =
 
-[English](./README_EN.md)
 
 如何编译自己需要的 OpenWrt 固件
 -
