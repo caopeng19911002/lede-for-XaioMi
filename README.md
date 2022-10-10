@@ -68,12 +68,3 @@ make V=s -j$(nproc)
 
 编译完成后输出路径：bin/targets
 
-### 如果你使用 WSL/WSL2 进行编译
-
-由于 WSL 的 PATH 中包含带有空格的 Windows 路径，有可能会导致编译失败，请在 `make` 前面加上：
-
-```bash
-PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-```
-
-
