@@ -33,8 +33,8 @@
 3. 下载源代码，更新 feeds 并选择配置
 
    ```bash
-   git clone https://github.com/coolsnowwolf/lede
-   cd lede
+   git clone https://github.com/caopeng19911002/lede-for-XaioMi openwrt
+   cd openwrt
    ./scripts/feeds update -a
    ./scripts/feeds install -a
    make menuconfig
