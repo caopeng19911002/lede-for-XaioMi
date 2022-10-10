@@ -20,39 +20,46 @@
    sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3 python2.7 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf wget curl swig rsync
    `
 
-3. 使用 `git clone https://github.com/caopeng19911002/lede-for-XaioMi openwrt` 命令下载好源代码， 然后 `cd openwrt` 进入目录
+3. 下载源代码，更新 feeds 并选择配置
 
-4. ```bash
+   ```bash
+   git clone https://github.com/coolsnowwolf/lede
+   cd lede
    ./scripts/feeds update -a
    ./scripts/feeds install -a
    make menuconfig
    ```
 
-5. `make -j8 download V=s` 下载dl库（国内请尽量全局科学上网）
+4. 下载 dl 库，编译固件
+（-j 后面是线程数，第一次编译推荐用单线程）
 
-6. 输入 `make -j6 V=s` （-j1 后面是线程数。第一次编译推荐用单线程）即可开始编译你要的固件了。
+   ```bash
+   make download -j8
+   make V=s -j1
+   ```
 
-本套代码保证肯定可以编译成功。里面包括了 R21 所有源代码，包括 IPK 的。
+本套代码保证肯定可以编译成功。里面包括了 R22 所有源代码，包括 IPK 的。
 
 你可以自由使用，但源码编译二次发布请注明我的 GitHub 仓库链接。谢谢合作！
-=
 
 二次编译：
+
 ```bash
 cd lede
 git pull
-./scripts/feeds update -a && ./scripts/feeds install -a
+./scripts/feeds update -a
+./scripts/feeds install -a
 make defconfig
-make -j8 download
-make -j$(($(nproc) + 1)) V=s
+make download -j8
+make V=s -j$(nproc)
 ```
 
 如果需要重新配置：
+
 ```bash
 rm -rf ./tmp && rm -rf .config
 make menuconfig
-make -j$(($(nproc) + 1)) V=s
+make V=s -j$(nproc)
 ```
 
 编译完成后输出路径：bin/targets
-
