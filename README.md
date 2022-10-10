@@ -53,28 +53,29 @@
    ```
    
    
-本套代码保证肯定可以编译成功。里面包括了 R22 所有源代码，包括 IPK 的。
+  本套代码保证肯定可以编译成功。里面包括了 R22 所有源代码，包括 IPK 的。
 
-你可以自由使用，但源码编译二次发布请注明我的 GitHub 仓库链接。谢谢合作！
+  你可以自由使用，但源码编译二次发布请注明我的 GitHub 仓库链接。谢谢合作！
 
-二次编译：
+  二次编译：
 
-```bash
-cd lede
-git pull
-./scripts/feeds update -a
-./scripts/feeds install -a
-make defconfig
-make download -j8
-make V=s -j12
-```
+  ```bash
+  cd lede
+  make clean
+  git pull
+  ./scripts/feeds update -a
+  ./scripts/feeds install -a
+  make defconfig
+  make download -j8
+  make V=s -j12
+  ```
 
-如果需要重新配置：
+  如果需要重新配置：
 
-```bash
-rm -rf ./tmp && rm -rf .config
-make menuconfig
-make V=s -j12
-```
+  ```bash
+  rm -rf ./tmp && rm -rf .config
+  make menuconfig
+  make V=s -j12
+  ```
 
-编译完成后输出路径：bin/targets
+  编译完成后输出路径：bin/targets
