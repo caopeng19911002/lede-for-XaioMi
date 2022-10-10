@@ -55,7 +55,7 @@ git pull
 ./scripts/feeds install -a
 make defconfig
 make download -j8
-make V=s -j$(nproc)
+make V=s -j12
 ```
 
 如果需要重新配置：
@@ -63,7 +63,7 @@ make V=s -j$(nproc)
 ```bash
 rm -rf ./tmp && rm -rf .config
 make menuconfig
-make V=s -j$(nproc)
+make V=s -j12
 ```
 
 编译完成后输出路径：bin/targets
