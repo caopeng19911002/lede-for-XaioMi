@@ -34,8 +34,8 @@
 （-j 后面是线程数，第一次编译推荐用单线程）
 
    ```bash
-   make download -j8
-   make V=s -j1
+   make -j8 download V=s
+   make -j1 V=s
    ```
 
 5.更改Argon主题
@@ -62,8 +62,8 @@
   ./scripts/feeds update -a
   ./scripts/feeds install -a
   make defconfig
-  make download -j8
-  make V=s -j12
+  make -j8 download V=s
+  make -j12 V=s
   ```
 
   如果需要重新配置：
@@ -71,7 +71,7 @@
   ```bash
   rm -rf ./tmp && rm -rf .config
   make menuconfig
-  make V=s -j12
+  make -j12 V=s
   ```
 
   编译完成后输出路径：bin/targets
