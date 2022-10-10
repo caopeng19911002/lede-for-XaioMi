@@ -42,13 +42,11 @@
 
 5.更改Argon主题
    ```bash
-   cd openwrt
    rm -rf feeds/luci/themes/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
    ```
    
 6.编译旧版openclash 0.44.29
    ```bash
-   cd openwrt
    rm -rf feeds/kenzo/luci-app-openclash && git clone https://github.com/caopeng19911002/openclash-0.44.29.git feeds/kenzo/luci-app-openclash && ./scripts/feeds install -a
    ```
    
