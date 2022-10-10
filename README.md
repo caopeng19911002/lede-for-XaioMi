@@ -57,9 +57,8 @@
    rm -rf feeds/kenzo/luci-app-openclash && git clone https://github.com/caopeng19911002/openclash-0.44.29.git feeds/kenzo/luci-app-openclash && ./scripts/feeds install -a
 
 
-4. 下载 dl 库，编译固件
+7. 下载 dl 库，编译固件
 （-j 后面是线程数，第一次编译推荐用单线程）
-
    ```bash
    make download -j8
    make V=s -j1
