@@ -74,4 +74,4 @@
   make -j12 V=s
   ```
 
-  编译完成后输出路径：bin/targets/       [config配置文件](./config配置文件.md)
+  编译完成后输出路径：bin/targets/       [Redmi-AX6-config配置文件](./AX6config配置文件.md)
