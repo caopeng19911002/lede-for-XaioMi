@@ -42,7 +42,7 @@
 
 5.更改Argon主题
    ```bash
-   rm -rf feeds/luci/themes/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon && ./scripts/feeds install -a
+   rm -rf feeds/luci/themes/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
    ```
    
 6.编译旧版openclash 0.44.29
