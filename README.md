@@ -33,28 +33,20 @@
 3. 下载源代码，更新 feeds 并选择配置
 
    ```bash
-   git clone https://github.com/caopeng19911002/lede-for-XaioMi openwrt
-   cd openwrt
+   git clone https://github.com/coolsnowwolf/lede
+   cd lede
    ./scripts/feeds update -a
    ./scripts/feeds install -a
    make menuconfig
    ```
 
-4.添加第三方源
+4. 下载 dl 库，编译固件
+（-j 后面是线程数，第一次编译推荐用单线程）
+
    ```bash
-   cd openwrt
-   sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-   sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+   make download -j8
+   make V=s -j1
    ```
-5.更改Argon主题
-   ```bash
-   cd openwrt
-   rm -rf feeds/luci/themes/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
-   ```
-6.安装旧版openclash 0.44.29
-   ```bash
-   cd openwrt
-   rm -rf feeds/kenzo/luci-app-openclash && git clone https://github.com/caopeng19911002/openclash-0.44.29.git feeds/kenzo/luci-app-openclash && ./scripts/feeds install -a
 
 本套代码保证肯定可以编译成功。里面包括了 R22 所有源代码，包括 IPK 的。
 
@@ -69,7 +61,7 @@ git pull
 ./scripts/feeds install -a
 make defconfig
 make download -j8
-make V=s -j12
+make V=s -j$(nproc)
 ```
 
 如果需要重新配置：
