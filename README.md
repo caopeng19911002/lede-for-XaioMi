@@ -27,8 +27,12 @@
 3. 下载源代码，更新 feeds 并选择配置
 
    ```bash
-   git clone https://github.com/coolsnowwolf/lede
-   cd lede
+   git clone https://github.com/caopeng19911002/lede-for-XaioMi openwrt
+   cd openwrt
+# 添加第三方源码
+   ```bash
+   sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+   sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
    ./scripts/feeds update -a
    ./scripts/feeds install -a
    make menuconfig
