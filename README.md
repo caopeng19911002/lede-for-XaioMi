@@ -34,8 +34,7 @@
 
    ```bash
    git clone https://github.com/coolsnowwolf/lede openwrt
-   svn co https://github.com/fichenx/OpenWrt/trunk/general/AX6
-   cp -rf AX6/* openwrt/
+   svn co https://github.com/fichenx/OpenWrt/trunk/general/AX6 openwrt
    cd openwrt
    sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
    sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
