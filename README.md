@@ -30,7 +30,7 @@
    make menuconfig
    ```
 
-4. Redmi-AX6编译最新Lede源码
+4. Redmi-AX6编译最新Lede源码/   [Redmi-AX6-config配置文件](./AX6config配置文件.config)。
 
    ```bash
    git clone https://github.com/coolsnowwolf/lede openwrt
