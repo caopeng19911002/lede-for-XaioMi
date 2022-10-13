@@ -30,7 +30,21 @@
    make menuconfig
    ```
 
-4. 下载 dl 库，编译固件
+4. Redmi-AX6编译最新Lede源码
+
+   ```bash
+   git clone https://github.com/coolsnowwolf/lede openwrt
+   git clone https://github.com/caopeng19911002/AX6.git
+   cp -rf AX6/* openwrt/
+   cd openwrt
+   sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+   sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+   ./scripts/feeds update -a
+   ./scripts/feeds install -a
+   make menuconfig
+   ```
+
+5. 下载 dl 库，编译固件
 （-j 后面是线程数，第一次编译推荐用单线程）
 
    ```bash
@@ -38,12 +52,12 @@
    make -j1 V=s
    ```
 
-5.更改Argon主题
+6.更改Argon主题
    ```bash
    rm -rf feeds/luci/themes/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
    ```
    
-6.编译旧版openclash 0.44.29
+7.编译旧版openclash 0.44.29
    ```bash
    rm -rf feeds/kenzo/luci-app-openclash && git clone https://github.com/caopeng19911002/openclash-0.44.29.git feeds/kenzo/luci-app-openclash && ./scripts/feeds install -a
    ```
