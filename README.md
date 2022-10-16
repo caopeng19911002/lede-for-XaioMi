@@ -102,7 +102,7 @@
   make -j12 V=s
   ```
 
-  编译完成后输出路径：bin/targets。
+  编译完成后输出路径：bin/targets
   
   下载固件到MAC桌面：
 
