@@ -104,7 +104,7 @@
 
   编译完成后输出路径：bin/targets。
   
-  上传固件到MAC桌面：
+  下载固件到MAC桌面：
 
   ```bash
   scp -r bin/targets/ipq807x/generic mac@192.168.10.204:/Users/mac/Desktop
