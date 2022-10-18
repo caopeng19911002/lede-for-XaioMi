@@ -21,7 +21,7 @@
 3. 下载源代码，更新 feeds 并选择配置/   [Redmi-AX6-config配置文件](./AX6config配置文件.config)。
 
    ```bash
-   git clone https://github.com/caopeng19911002/lede-for-XaioMi openwrt
+   git clone https://github.com/yaya131/lede-for-XaioMi openwrt
    cd openwrt
    sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
    sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
