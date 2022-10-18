@@ -119,6 +119,6 @@
   上传openclash内核到路由器：
 
   ```bash
-  scp /Volumes/共享磁盘/Redmi-AX6自己编译/openclash/* root@192.168.10.3:/etc/openclash/core
+  scp /Volumes/共享磁盘/Redmi-AX6自己编译/openclash/* root@192.168.10.1:/etc/openclash/core
   ```
   
