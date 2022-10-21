@@ -122,3 +122,9 @@
   scp /Volumes/共享磁盘/Redmi-AX6自己编译/openclash/* root@192.168.10.1:/etc/openclash/core
   ```
   
+  清除ssh缓存：
+
+  ```bash
+  rm -rf ~/.ssh/known_hosts
+  ```
+  
