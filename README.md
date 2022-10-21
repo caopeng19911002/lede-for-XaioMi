@@ -102,6 +102,12 @@
   scp -r parallels@192.168.10.230:/home/parallels/openwrt/bin/targets/ipq807x/generic /Users/mac/Desktop
   ```
   
+  下载openclash内核到MAC桌面：
+
+  ```bash
+  scp -r root@192.168.10.3:/etc/openclash/core /Users/mac/Desktop
+  ```
+  
   上传openclash内核到路由器：
 
   ```bash
