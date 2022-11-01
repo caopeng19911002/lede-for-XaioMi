@@ -120,3 +120,14 @@
   rm -rf ~/.ssh/known_hosts
   ```
   
+ 安装aliyundrive-webdav1.8.9：
+
+  ```bash
+  wget https://github.com/messense/aliyundrive-webdav/releases/download/v1.8.9/aliyundrive-webdav_1.8.9-1_aarch64_cortex-a53.ipk
+  wget https://github.com/messense/aliyundrive-webdav/releases/download/v1.8.9/luci-app-aliyundrive-webdav_1.8.9_all.ipk
+  wget https://github.com/messense/aliyundrive-webdav/releases/download/v1.8.9/luci-i18n-aliyundrive-webdav-zh-cn_1.8.9-1_all.ipk
+  opkg install aliyundrive-webdav_1.8.9-1_aarch64_cortex-a53.ipk
+  opkg install luci-app-aliyundrive-webdav_1.8.9_all.ipk
+  opkg install luci-i18n-aliyundrive-webdav-zh-cn_1.8.9-1_all.ipk
+  ```
+   
