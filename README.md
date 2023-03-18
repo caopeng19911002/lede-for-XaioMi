@@ -121,14 +121,14 @@
   rm -rf ~/.ssh/known_hosts
   ```
   
- 安装aliyundrive-webdav2.0.5：
+ 安装aliyundrive-webdav2.1.0：
 
   ```bash
-  wget https://github.com/messense/aliyundrive-webdav/releases/download/v2.0.5/aliyundrive-webdav_2.0.5-1_aarch64_cortex-a53.ipk
-  wget https://github.com/messense/aliyundrive-webdav/releases/download/v2.0.5/luci-app-aliyundrive-webdav_2.0.5_all.ipk
-  wget https://github.com/messense/aliyundrive-webdav/releases/download/v2.0.5/luci-i18n-aliyundrive-webdav-zh-cn_2.0.5-1_all.ipk
-  opkg install aliyundrive-webdav_2.0.5-1_aarch64_cortex-a53.ipk
-opkg install luci-app-aliyundrive-webdav_2.0.5_all.ipk
-opkg install luci-i18n-aliyundrive-webdav-zh-cn_2.0.5-1_all.ipk
+  wget https://github.com/messense/aliyundrive-webdav/releases/download/v2.1.0/aliyundrive-webdav_2.1.0-1_aarch64_cortex-a53.ipk
+wget https://github.com/messense/aliyundrive-webdav/releases/download/v2.1.0/luci-app-aliyundrive-webdav_2.1.0_all.ipk
+wget https://github.com/messense/aliyundrive-webdav/releases/download/v2.1.0/luci-i18n-aliyundrive-webdav-zh-cn_2.1.0-1_all.ipk
+opkg install aliyundrive-webdav_2.1.0-1_aarch64_cortex-a53.ipk
+opkg install luci-app-aliyundrive-webdav_2.1.0_all.ipk
+opkg install luci-i18n-aliyundrive-webdav-zh-cn_2.1.0-1_all.ipk
   ```
    
